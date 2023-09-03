@@ -10,6 +10,9 @@ void setup() {
   pinMode(btnPin, INPUT);
 }
 
+// If button is not pressed the current will be 0 hence btnPin will return 1 (Open Circuit)
+// If button is pressed the current will be 1hence btnPin will return 0 (Short Circuit)
+
 void loop() {
   btnRead = digitalRead(btnPin);
   Serial.println(btnRead);
